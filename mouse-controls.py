@@ -28,7 +28,7 @@ def on_key_press(key):
     elif key == keyboard.Key.enter:
         pyautogui.mouseDown()
     elif key == keyboard.Key.alt:
-        pyautogui.mouseDown(button='right')
+        pyautogui.middleClick()
        
     #elif key == keyboard.Key.enter:
         #pyautogui.click()
