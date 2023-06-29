@@ -1,4 +1,6 @@
 from pynput import keyboard
+import sys 
+sys.path.append("~/mouse-controls/pyautogui")
 import pyautogui
 
 # constants for trackpad movement
