@@ -45,7 +45,7 @@ def on_key_release(key):
     elif key == keyboard.Key.down:
         down_pressed = False
     elif key == keyboard.Key.enter:
-        pyautogui.mouseUp(button='right')
+        pyautogui.mouseUp()
     elif key == keyboard.Key.alt:
         pyautogui.mouseUp(button='left')
 
