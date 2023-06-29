@@ -3,7 +3,6 @@ sys.path.append("~/mouse-controls/pyautogui")
 import pyautogui
 import time
 from pynput import keyboard
-
 # Define the duration of each pan movement
 pan_duration = 0.5
 
@@ -13,23 +12,23 @@ pan_distance_y = 100  # Adjust the value as needed for vertical panning
 
 # Function to simulate camera pan
 def simulate_pan(key):
-    if key == 'up':
+    if key == keyboard.Key.up:
         pyautogui.moveRel(0, -pan_distance_y, duration=pan_duration)
-    elif key == 'down':
+    elif key == keyboard.Key.down:
         pyautogui.moveRel(0, pan_distance_y, duration=pan_duration)
-    elif key == 'left':
+    elif key == keyboard.Key.left:
         pyautogui.moveRel(-pan_distance_x, 0, duration=pan_duration)
-    elif key == 'right':
+    elif key == keyboard.Key.right:
         pyautogui.moveRel(pan_distance_x, 0, duration=pan_duration)
 
-# Monitor keyboard input for arrow keys
-while True:
-    if keyboard.is_pressed('up'):
-        simulate_pan('up')
-    elif keyboard.is_pressed('down'):
-        simulate_pan('down')
-    elif keyboard.is_pressed('left'):
-        simulate_pan('left')
-    elif keyboard.is_pressed('right'):
-        simulate_pan('right')
-    time.sleep(0.1)  # Adjust the sleep time as needed
+# Define the callback for key press event
+def on_key_press(key):
+    simulate_pan(key)
+
+# Define the callback for key release event (if needed)
+def on_key_release(key):
+    pass
+
+# Create listener objects
+with keyboard.Listener(on_press=on_key_press, on_release=on_key_release) as listener:
+    listener.join()
