@@ -2,7 +2,7 @@ import sys
 sys.path.append("~/mouse-controls/pyautogui")
 import pyautogui
 import time
-import keyboard
+from pynput import keyboard
 
 # Define the duration of each pan movement
 pan_duration = 0.5
