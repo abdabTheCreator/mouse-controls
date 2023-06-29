@@ -5,7 +5,7 @@ import pyautogui
 import time
 
 # constants for trackpad movement
-TRACKPAD_SENSITIVITY = 5  # Adjust this value to control the camera movement speed
+TRACKPAD_SENSITIVITY = 10   # Adjust this value to control the camera movement speed
 
 # globals
 left_pressed = False
@@ -48,7 +48,7 @@ while True:
     # simulate trackpad movement based on arrow key presses
     x_move = (right_pressed - left_pressed) * TRACKPAD_SENSITIVITY
     y_move = (down_pressed - up_pressed) * TRACKPAD_SENSITIVITY
-    pyautogui.move(x_move, y_move, duration=0)
+    pyautogui.moveRel(x_move, y_move, duration=0)
 
     # to control the camera movement speed
     time.sleep(0.01)
