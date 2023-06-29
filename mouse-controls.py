@@ -25,6 +25,9 @@ def on_key_press(key):
         up_pressed = True
     elif key == keyboard.Key.down:
         down_pressed = True
+    elif key == keyboard.Key.alt:
+        #pyautogui.click()
+        pyautogui.mouseDown(button='left') 
     elif key == keyboard.Key.enter:
         #pyautogui.click()
         pyautogui.mouseDown(button='right')
@@ -43,6 +46,8 @@ def on_key_release(key):
         down_pressed = False
     elif key == keyboard.Key.enter:
         pyautogui.mouseUp(button='right')
+    elif key == keyboard.Key.alt:
+        pyautogui.mouseUp(button='left')
 
 # start key listener
 listener = keyboard.Listener(on_press=on_key_press, on_release=on_key_release)
