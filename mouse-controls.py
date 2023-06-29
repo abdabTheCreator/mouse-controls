@@ -5,7 +5,7 @@ import pyautogui
 import time
 
 # constants for trackpad movement
-TRACKPAD_SENSITIVITY = 80   
+TRACKPAD_SENSITIVITY = 50   
 
 # globals
 left_pressed = False
