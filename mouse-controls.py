@@ -25,7 +25,7 @@ def on_key_press(key):
         up_pressed = True
     elif key == keyboard.Key.down:
         down_pressed = True
-    elif hasattr(key, 'char') and key.char == '.':
+    elif key == keyboard.Key.enter:
         pyautogui.rightClick()
 
 # handle arrow key releases
