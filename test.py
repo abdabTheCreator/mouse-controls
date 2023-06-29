@@ -2,6 +2,7 @@ import sys
 sys.path.append("~/mouse-controls/pyautogui")
 import pyautogui
 import time
+import keyboard
 
 # Define the duration of each pan movement
 pan_duration = 0.5
@@ -23,7 +24,12 @@ def simulate_pan(key):
 
 # Monitor keyboard input for arrow keys
 while True:
-    key = pyautogui.keyDown()
-    if key == 'up' or key == 'down' or key == 'left' or key == 'right':
-        simulate_pan(key)
+    if keyboard.is_pressed('up'):
+        simulate_pan('up')
+    elif keyboard.is_pressed('down'):
+        simulate_pan('down')
+    elif keyboard.is_pressed('left'):
+        simulate_pan('left')
+    elif keyboard.is_pressed('right'):
+        simulate_pan('right')
     time.sleep(0.1)  # Adjust the sleep time as needed
