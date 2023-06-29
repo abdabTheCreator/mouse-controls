@@ -5,7 +5,7 @@ import pyautogui
 import time
 
 # constants for trackpad movement
-TRACKPAD_SENSITIVITY = 50   
+TRACKPAD_SENSITIVITY = 10   
 
 # globals
 left_pressed = False
@@ -25,8 +25,7 @@ def on_key_press(key):
         up_pressed = True
     elif key == keyboard.Key.down:
         down_pressed = True
-    elif key == keyboard.Key.enter:
-        pyautogui.press('right')
+    
 
 # handle arrow key releases
 def on_key_release(key):
