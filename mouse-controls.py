@@ -2,6 +2,7 @@ from pynput import keyboard
 import sys 
 sys.path.append("~/mouse-controls/pyautogui")
 import pyautogui
+import time
 
 # constants for trackpad movement
 TRACKPAD_SENSITIVITY = 5  # Adjust this value to control the camera movement speed
