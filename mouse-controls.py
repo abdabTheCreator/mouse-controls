@@ -26,7 +26,8 @@ def on_key_press(key):
     elif key == keyboard.Key.down:
         down_pressed = True
     elif key == keyboard.Key.enter:
-        pyautogui.click()
+        #pyautogui.click()
+        pyautogui.mouseDown(button='right')
 
 # handle arrow key releases
 def on_key_release(key):
@@ -40,6 +41,8 @@ def on_key_release(key):
         up_pressed = False
     elif key == keyboard.Key.down:
         down_pressed = False
+    elif key == keyboard.Key.enter:
+        pyautogui.mouseUp(button='right')
 
 # start key listener
 listener = keyboard.Listener(on_press=on_key_press, on_release=on_key_release)
