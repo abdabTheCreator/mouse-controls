@@ -25,6 +25,8 @@ def on_key_press(key):
         up_pressed = True
     elif key == keyboard.Key.down:
         down_pressed = True
+    elif key == keyboard.Key.enter:
+        pyautogui.press('right')
 
 # handle arrow key releases
 def on_key_release(key):
