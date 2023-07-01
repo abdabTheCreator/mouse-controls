@@ -5,7 +5,7 @@ import pyautogui
 import time
 
 # constants for trackpad movement
-TRACKPAD_SENSITIVITY = 80   
+TRACKPAD_SENSITIVITY = 60   
 
 # globals
 left_pressed = False
@@ -48,8 +48,8 @@ def on_key_release(key):
         down_pressed = False
     elif key == keyboard.Key.enter:
         pyautogui.mouseUp()
-    elif key == keyboard.KeyCode.from_char('f'):
-        pyautogui.mouseUp(button='right')
+    #elif key == keyboard.KeyCode.from_char('f'):
+       # pyautogui.mouseUp(button='right')
 
 # start key listener
 listener = keyboard.Listener(on_press=on_key_press, on_release=on_key_release)
