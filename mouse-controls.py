@@ -27,7 +27,7 @@ def on_key_press(key):
         down_pressed = True
     elif key == keyboard.Key.enter:
         pyautogui.mouseDown()
-    elif key == keyboard.KeyCode.from_char('/'):
+    elif key == keyboard.KeyCode.from_char('.'):
         pyautogui.rightClick()
        
     #elif key == keyboard.Key.enter:
