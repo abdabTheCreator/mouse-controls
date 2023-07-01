@@ -27,7 +27,7 @@ def on_key_press(key):
         down_pressed = True
     elif key == keyboard.Key.enter:
         pyautogui.mouseDown()
-    elif key == keyboard.KeyCode.from_char('l'):
+    elif key == keyboard.KeyCode.from_char('k'):
         pyautogui.leftClick()
        
     #elif key == keyboard.Key.enter:
